@@ -19,6 +19,8 @@
   <canvas id="inc5"></canvas>
   <canvas id="inc20"></canvas>
   <canvas id="side_bar"></canvas>
+  <canvas id="just_one"></canvas>
+  <canvas id="custom_spacing"></canvas>
   
   <script type="text/javascript" language="javascript" charset="utf-8">
   window.onload = function() {
@@ -94,6 +96,20 @@
     g = setup_basic_graph('SideBar', 'side_bar', 400)
     g.title = "Side bar test"
     g.draw()
+
+    g = new Bluff.Bar('just_one',400);
+    g.data('peaches', [10]);
+    g.minimum_value = 0;
+    g.maximum_value = 15;
+    g.title = "Just one bar"
+    g.draw();
+    
+    g = new Bluff.Bar('custom_spacing',400);
+    g.data('peaches', [10,3]);
+    g.spacing_factor = 0.1;
+    g.minimum_value = 0;
+    g.title = "Just one bar"
+    g.draw();
   };
   </script>
   
